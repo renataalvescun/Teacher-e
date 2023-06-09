@@ -1,0 +1,380 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&family=Nunito+Sans:wght@200;400&display=swap');
+
+/* resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(0deg, #8EC5FC 0%, #E0C3FC 50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: 1%;
+  margin-bottom: 6%;
+  font-size: clamp(0.7em, 1em, 2.5em);
+}
+
+
+/* página 1 (INDEX) */
+
+
+.text-index {
+  border-top: 2px solid white;
+  padding: 26px;
+  border-bottom: 2px solid white;
+}
+
+.text-index h3 {
+  text-align: center;
+  font-family: 'Maven Pro', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+
+#index-divs {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  padding: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.index-div-1 button {
+  width:110px;
+  height:100px;
+  padding: 15%;
+  background-image: linear-gradient(44deg, #4a8ccd 0%, #b089d4 50%);
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+.index-div-1  button:hover {
+  background-image: linear-gradient(44deg, #98bde3 0%, #cdb7e1 50%);
+}
+
+
+/* nav-bar - padrão no site */
+
+a { /* Personalização da navbar, texto dos links  */
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: bold;
+  font-variant-caps: all-petite-caps;
+  font-size: 3.2vh; /* vh pra não ficar modificando  */
+}
+
+
+.header a:not(.negacao) { /* para não colocar o efeito no logo em texto */
+  background-image: none;
+  padding: none;
+  border-radius: none;
+  transform: none;
+}
+
+
+a:hover {
+
+  background-image: linear-gradient(-45deg, #8EC5FC 0%, #cba1f1 50%);
+  border-radius: 30px;
+  padding: 7px;
+  transform: translate(-50%, -50%);
+  animation: mygradient 2s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* gradiente */
+
+@keyframes mygradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.logo { /* logo em texto */
+  font-size: 4vh;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  margin-bottom: 2%;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {  /* links */
+  letter-spacing: 2px;
+  margin-left: 50px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div { /* indica o design hamburguer do menu mobile */
+  width: 21px;
+  height: 2px;
+  background: #ffffff;
+  margin: 8px;
+  transition: 0.2s;
+}
+
+
+/* Conteudo principal das PÁGINAS 1 e 2 (Adicionar o aluno e professor) */
+
+.main-content {
+  display: flex;
+}
+
+input {
+  padding: 4%;
+  border: none;
+  border-bottom: 1px solid #b177be; 
+  width: 230px;
+}
+
+input:focus {
+  outline: 2px solid rgb(209, 198, 220); /* Cor e estilo da borda */
+}
+
+
+.form {
+  background-color: #ffffff;
+  padding: 27px;
+  width: 30%;
+  height: 100%;
+  margin-left: 6%;
+  border-radius: 4%;
+  box-shadow: 6px 9px 10px rgba(0, 0, 0, 0.2);
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 33px;
+  gap: 14px;
+}
+
+#formulario button {
+  width: 60%;
+  margin: 20px;
+  padding: 2%;
+  background-image: linear-gradient(44deg, #4a8ccd 0%, #b089d4 50%);
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+#formulario button:hover {
+  background-image: linear-gradient(44deg, #98bde3 0%, #cdb7e1 50%);
+}
+
+label {
+  color: #080808;
+}
+
+.titulo {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  text-align: center;
+  padding: 1%;
+}
+
+#content, #content2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* centralizar no meio da página */
+}
+
+.cards {
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-delete:hover {
+  background-color: rgb(216, 193, 246);
+}
+
+.botao-find:hover {
+  background-color: rgb(190, 219, 246);
+}
+
+article {
+  width: 250px;
+  height: fit-content;
+  margin: 11px;
+  padding: 3%;
+  margin-left: 25px;
+  border-radius: 10px;
+  box-shadow: 6px 9px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  text-align: center;
+}
+
+article button {
+  width: 31%;
+  margin: 7px;
+  background-color: rgb(222, 222, 222);
+  border: none;
+  padding: 6px;
+  border-radius: 7px;
+}
+
+
+article:hover {
+  transition: all 0.3s;
+  box-shadow: none;
+  background-color: rgb(235, 234, 234);
+}
+
+
+/* Mobile e o outras telas menores */
+
+@media only screen and (max-width: 666px) {
+
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    width: 70%;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 10%;
+    margin-right: 5%;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  #formulario {
+    margin-top: 20px;
+  }
+
+  .form p {
+    margin-bottom: 10px;
+  }
+
+  .form input[type="text"] {
+    width: 100%;
+  }
+
+  #button2 {
+    width: 100%;
+    padding: 23px;
+  }
+
+
+  body {
+    overflow-x: hidden;
+
+  }
+
+  .header {
+    background-color: #aba2d7;
+  }
+
+  nav {
+    margin: none;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 6vh;
+    right: 0;
+    width: fit-content;
+    height: 41vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    text-align: center;
+    background-color: #aba2d7;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  #titulo-pagina {
+    text-align: center;
+    font-size: 3vh;
+  }
+
+  a {
+    color: #ffffff;
+  }
+
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}

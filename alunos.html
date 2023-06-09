@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Teacher-e | Alunos </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/img.icons8.png" type="image/x-icon">
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+          <a class="logo" href="index.html"> Teacher-e </a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li>
+                <a class="negacao" href="professores.html"> 
+                    Adicione professores 
+                </a>
+            </li>
+            <li>
+                <a class="negacao" href="alunos.html"> 
+                    Adicione alunos 
+                </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <script src="js/mobile-navbar.js"></script>
+    <main class="main-content"> 
+        <section class="form">
+            <h1 class="titulo"> Inserir aluno </h1>
+            <form id="formulario">
+                <p> 
+                    <i class="ph ph-users"></i>
+                    <label for="name"> Nome: </label> <br>
+                    <input type="text" id="name" placeholder="Maria Silva" />
+                </p>
+                <p>
+                    <i class="ph ph-address-book"></i>
+                    <label for="tia"> Tia: </label> <br>
+                    <input type="text" id="tia" placeholder="123456" />
+                </p>
+                <p>
+                    <i class="ph ph-graduation-cap"></i>
+                    <label for="course"> Curso: </label> <br>
+                    <input type="text" id="course" placeholder="Design de Moda" />
+                </p>
+                <button id='button' onclick='insertStudent()'> Inserir aluno </button>
+            </form>
+        </section>
+        <section class="cards">
+            <div id="content">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

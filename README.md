@@ -98,4 +98,4 @@ $ npm run start
 
 # Acesse http://localhost:3001
 ```
-Feito com ❤️ por Renata Alves 👋🏽 [Entre em contato!](https://www.linkedin.com/in/renataalvesz/)
+Feito com ⭐ por Renata Alves [Entre em contato!](https://www.linkedin.com/in/renataalvesz/)
